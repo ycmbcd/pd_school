@@ -1,22 +1,26 @@
-// 用户登入
-function pd_login(){
-	var login_msg = $("#login_box form").serialize();	
-	$.ajax({
-        type: "post",
-        url: 'index.php',        
-        data:login_msg,
-        success: function (result) {
-            if(result=="0"){
-            	alert("输入不正确");
-            }else{
-            	location.href="show.php";
-            }
-        },
-        error: function () {
-           alert("ajax连接错误");
-        }
-    });
-}
+// 登入
+$(document).ready(function(){
+	$("#login_btn").click(function(){
+		var msg = $("#login").serialize();		
+		$.ajax({
+			url:"index.php",
+			type:"POST",
+			data:msg,
+			//dataType:"json",
+			success:function(data){
+				if(data=="ok"){
+					window.location='show.html';
+				}else{
+					alert("用户名或密码不正确")
+				}
+				
+			},
+			error:function(){
+				alert("ajax没有连接到");
+			}
+		})
+	})
+})
 // 导出全部数据  接受数据位json格式 课直接使用
 function aaa(){
 	$.ajax({
