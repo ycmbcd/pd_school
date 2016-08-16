@@ -1,17 +1,21 @@
 // 登入
+
 $(document).ready(function(){
 	$("#login_btn").click(function(){
-		var msg = $("#login").serialize();		
+		var msg = $("#login form input").serialize();		
 		$.ajax({
-			url:"index.php",
+			url:"log_in.php",
 			type:"POST",
 			data:msg,
 			//dataType:"json",
 			success:function(data){
 				if(data=="ok"){
-					window.location='show.html';
+					window.location='show.php';
 				}else{
-					alert("用户名或密码不正确")
+					$('#myModal_login_error').modal('show');
+					setTimeout(function(){
+						$('#myModal_login_error').modal('hide');
+					},2000)
 				}
 				
 			},
@@ -20,7 +24,9 @@ $(document).ready(function(){
 			}
 		})
 	})
-})
+});
+
+
 // 导出全部数据  接受数据位json格式 课直接使用
 function aaa(){
 	$.ajax({
@@ -38,7 +44,6 @@ function aaa(){
         }
     });
 }
-
 // 接收数据位字符串格式  再进行转换
 function bbb(){
 	$.ajax({

@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* all-state */ 
+html {overflow-y:none;}
+body {margin:0; padding:0; font-size:12px; font-family:Meiryo;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;border:0px;}
+img{ border:none;display:block;}
+li{list-style-type:none;}
+ol,ul {list-style:none;}
+h3,h4,h5,h6{font-size:14px; font-weight:normal;}
+address,cite,code,em,th {font-weight:normal; font-style:normal;}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color:#FF1
+}
+*{
+	padding:0;
+	margin:0;}
+.left{
+	float:left;}
+.right{
+	float:right;}
+.clear{
+	clear:both;}
+.red{
+	color:#E50000;}
+.auto{
+	margin:0 auto;}
+.m10{
+	margin-top:10px;}
+.m5{
+	margin-top:5px;}
+.m7{
+	margin-top:8px;}
+.m20{
+	margin-top:20px;}
+.w960{
+	width:960px;}
+
+/*index*/
+#login {
+	height:300px;
+	margin-top:300px;
+	text-align: center;
+	/*border: 1px solid #31708F;*/
+}
+#login form{
+	width: 100%;
+}
+#login form div{
+	width: 80%;
+	margin: 0 auto;
+}
+#login input{
+	margin: 10px 0;
+	
+}
+#login .btn{
+	width: 25%;
+}
+#username,#password{
+	width: 100%;
+}
+/*ene index*/
+
+
+#newuser_box {
+	width: 420px;
+	margin:0 auto;
+	margin-top:300px;
+	
+}
+#newuser_box label{
+	display: inline-block;
+	width:120px;
+	margin:10px;
+}
+.new_point_txt{
+	color:#E50000;
+}
